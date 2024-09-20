@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import "./nav.css";
-import cart from "../assets/cart.svg";
 import jacket from "../assets/jacket.svg";
+import Cart from "./Cart";
 
-export default function Navigation() {
+export default function Navigation({ cart, getTotalQuantity }) {
+  const total = getTotalQuantity();
   return (
     <>
       <div className="header nav">
@@ -18,9 +19,7 @@ export default function Navigation() {
           <Link to="shop">Shop</Link>
         </div>
         <div className="cart-container">
-          <Link to="cart">
-            <img src={cart} className="cart-img" />
-          </Link>
+          <Cart cart={cart} total={total} />
         </div>
       </div>
     </>

@@ -37,7 +37,7 @@ button:hover {
   --accent-med: #7c3cdd;
   --accent-light: #d6c6ff;
 
-  --site-padding: 2rem 15vw;
+  --site-padding: 2rem calc(15vw);
 
   margin: 0 auto;
   padding: 0;
@@ -45,10 +45,6 @@ button:hover {
   color: var(--text-dark);
   background-color: var(--bg-light);
   height: 100vh;
-}
-
-.main-content {
-  padding: 0;
 }
 
 .home-wrapper {

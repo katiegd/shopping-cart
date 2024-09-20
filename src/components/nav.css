@@ -43,6 +43,24 @@
   transform: translate(0px, -3px);
 }
 
+.cart-total {
+  color: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  left: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--accent-med);
+  width: 10px;
+  height: 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 .cart-img {
   height: 35px;
   width: 35px;
@@ -54,6 +72,15 @@
 }
 
 .cart-img:hover {
-  transform: scale(1.1);
   background-color: var(--accent-light);
+}
+
+.cart-wrapper {
+  position: relative;
+  transition: all 200ms ease;
+}
+
+.cart-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }

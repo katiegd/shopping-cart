@@ -8,9 +8,37 @@
 }
 
 .shop-categories {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   font-size: 2rem;
   font-weight: 800;
 }
+
+.categories-list {
+  display: flex;
+  text-transform: uppercase;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.category-item {
+  color: var(--accent-dark);
+  padding: 2px 10px;
+  border-radius: 10px;
+  transition: all 200ms;
+}
+
+.category-item.selected {
+  background-color: var(--accent-light);
+}
+
+.category-item:hover {
+  background-color: var(--nav);
+  color: var(--accent-med);
+  cursor: pointer;
+}
+
 .shop-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));

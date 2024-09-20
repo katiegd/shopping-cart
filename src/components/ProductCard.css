@@ -37,6 +37,14 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 1px,
     rgba(27, 31, 35, 0.05) 0px 0px 10px 1px;
+  transition: all 200ms ease-out;
+}
+
+.product-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 1px,
+    rgba(27, 31, 35, 0.25) 0px 0px 10px 1px;
 }
 
 .product-info {
@@ -57,12 +65,14 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .product-img img {
   max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
 }
 
 .product-fav {

@@ -1,7 +1,7 @@
-import "./App.css";
+import "../App.css";
 import { Link } from "react-router-dom";
 
-function App() {
+function Home() {
   return (
     <>
       <div className="home-wrapper">
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
