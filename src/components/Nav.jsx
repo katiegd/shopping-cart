@@ -2,8 +2,25 @@ import { Link } from "react-router-dom";
 import "./nav.css";
 import jacket from "../assets/jacket.svg";
 import Cart from "./Cart";
+import Likes from "./Likes";
+import heartEmpty from "../assets/heart-empty.svg";
+import heartFull from "../assets/heart-full.svg";
 
-export default function Navigation({ cart, getTotalQuantity }) {
+export default function Navigation({
+  cart,
+  getTotalQuantity,
+  inputNum,
+  setInputNum,
+  addToCart,
+  removeFromCart,
+  clearCart,
+  formatPrice,
+  calculateTotal,
+  limitCharacters,
+  incrementCart,
+  decrementCart,
+  likes,
+}) {
   const total = getTotalQuantity();
   return (
     <>
@@ -18,8 +35,26 @@ export default function Navigation({ cart, getTotalQuantity }) {
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>
         </div>
-        <div className="cart-container">
-          <Cart cart={cart} total={total} />
+        <div className="cart-likes-container">
+          <Link to="likes">
+            <div className="heart-container">
+              <img src={likes.length > 0 ? heartFull : heartEmpty} />
+            </div>
+          </Link>
+          <Cart
+            cart={cart}
+            total={total}
+            inputNum={inputNum}
+            setInputNum={setInputNum}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            clearCart={clearCart}
+            formatPrice={formatPrice}
+            calculateTotal={calculateTotal}
+            limitCharacters={limitCharacters}
+            incrementCart={incrementCart}
+            decrementCart={decrementCart}
+          />
         </div>
       </div>
     </>

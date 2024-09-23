@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
-  const { addToCart } = useOutletContext();
+  const { addToCart, removeFromCart } = useOutletContext();
 
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
@@ -44,7 +44,7 @@ export default function Shop() {
 
         const timeOut = setTimeout(() => {
           setIsLoading(false);
-        }, 500);
+        }, 0);
 
         return () => clearTimeout(timeOut);
       })
@@ -76,7 +76,7 @@ export default function Shop() {
         <>
           <div className="shop-container">
             <div className="shop-categories">
-              Categories
+              <p className="categories-header">Categories</p>
               <div className="categories-list">
                 {categories.map((category) => (
                   <p

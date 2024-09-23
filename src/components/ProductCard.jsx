@@ -1,5 +1,6 @@
 import "./ProductCard.css";
 import heartEmpty from "../assets/heart-empty.svg";
+import heartFull from "../assets/heart-full.svg";
 import defaultImage from "../assets/27002.jpg";
 import { useOutlet, useOutletContext } from "react-router-dom";
 
@@ -10,15 +11,15 @@ export default function ProductCard({
   setProdDetails,
   formatPrice,
 }) {
-  const { addToCart } = useOutletContext();
+  const { addToCart, likes, toggleLikes } = useOutletContext();
   function limitCharacters(str) {
     return str.length > 50 ? str.substring(0, 50) + "..." : str;
   }
-
   function showProdDetails() {
     setShowDetails(true);
     setProdDetails(product);
   }
+
   return (
     <>
       <div className="product-wrapper" onClick={showProdDetails}>
@@ -31,7 +32,18 @@ export default function ProductCard({
         </div>
         <div className="product-info">
           <div className="product-price-fav">
-            <img src={heartEmpty} className="product-fav" />
+            <img
+              src={
+                likes.some((likedItem) => likedItem.id === product.id)
+                  ? heartFull
+                  : heartEmpty
+              }
+              className="product-fav"
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleLikes(product);
+              }}
+            />
             <p className="product-price">${formatPrice(product.price)}</p>
           </div>
           <div className="product-name">

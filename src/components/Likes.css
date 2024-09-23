@@ -1,0 +1,21 @@
+.main-likes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: auto;
+  min-height: calc(100vh - 230px);
+  padding: var(--site-padding);
+}
+
+.liked-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.likes-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}

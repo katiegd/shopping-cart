@@ -1,28 +1,15 @@
 import "./DetailsModal.css";
 import heartEmpty from "../assets/heart-empty.svg";
+import QuantityInput from "./QuantityInput";
 
 export default function DetailsModal({
   product,
   setShowDetails,
   formatPrice,
+  addToCart,
   inputNum,
   setInputNum,
-  addToCart,
 }) {
-  function handleInputChange(e) {
-    const target = e.target.value;
-
-    setInputNum(target);
-  }
-
-  function incrementInput() {
-    setInputNum(inputNum + 1);
-  }
-
-  function decrementInput() {
-    setInputNum(inputNum - 1);
-  }
-
   return (
     <>
       {" "}
@@ -51,23 +38,7 @@ export default function DetailsModal({
               </div>
               <p className="mod-product-desc">{product.description}</p>
 
-              <div className="input-container">
-                <button className="subtract-input" onClick={decrementInput}>
-                  -
-                </button>
-                <input
-                  type="number"
-                  className="input-qty"
-                  value={inputNum}
-                  onChange={handleInputChange}
-                  min="1"
-                  max="100"
-                  readOnly
-                />
-                <button className="add-input" onClick={incrementInput}>
-                  +
-                </button>
-              </div>
+              <QuantityInput setInputNum={setInputNum} inputNum={inputNum} />
               <button
                 className="btn-primary"
                 onClick={() => {

@@ -43,13 +43,18 @@
   transform: translate(0px, -3px);
 }
 
+.cart-likes-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .cart-total {
   color: var(--accent-light);
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 10;
   top: 0px;
   left: 40px;
   padding: 5px;
@@ -62,16 +67,18 @@
 }
 
 .cart-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 35px;
   width: 35px;
   padding: 10px;
   border-radius: 50%;
   transition: all 400ms ease;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .cart-img:hover {
+  cursor: pointer;
   background-color: var(--accent-light);
 }
 
@@ -83,4 +90,22 @@
 .cart-wrapper:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+.heart-container {
+  height: 35px;
+  width: 35px;
+  padding: 0.2rem;
+  transition: all 200ms ease-out;
+}
+
+.heart-container img {
+  height: 35px;
+  width: 35px;
+}
+
+.heart-container:hover {
+  transform: scale(1.2);
+  content: url("../assets/heart-full.svg");
+  cursor: pointer;
 }
