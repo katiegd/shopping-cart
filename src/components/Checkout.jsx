@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import sadFace from "../assets/sad.svg";
-import "./Checkout.css";
+import "../components/CSS/Checkout.css";
 
 export default function Checkout() {
   const {

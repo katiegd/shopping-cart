@@ -1,11 +1,11 @@
-import "./Shop.css";
+import "../components/CSS/Shop.css";
 import ProductCard from "./ProductCard";
 import DetailsModal from "./DetailsModal";
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 export default function Shop() {
-  const { addToCart, removeFromCart } = useOutletContext();
+  const { addToCart } = useOutletContext();
 
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);

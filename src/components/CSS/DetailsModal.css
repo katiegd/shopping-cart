@@ -128,3 +128,27 @@ input[type="number"] {
 .add-input:hover {
   background-color: var(--accent-dark);
 }
+
+@media (max-width: 1125px) {
+  .modal-content {
+    max-width: 95%;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-title {
+    font-size: 1.3rem;
+  }
+
+  .product-title {
+    margin-bottom: 1rem;
+  }
+
+  .details-container {
+    gap: 20px;
+  }
+}

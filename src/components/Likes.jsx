@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import "./Likes.css";
+import "../components/CSS/Likes.css";
 import ProductCard from "./ProductCard";
 
 export default function Likes() {

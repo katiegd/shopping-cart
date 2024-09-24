@@ -7,7 +7,7 @@
   position: relative;
   bottom: 0;
   left: 0;
-  height: 150px;
+  height: fit-content;
 }
 
 .footer-h3 {
@@ -25,4 +25,17 @@ li {
 
 .footer-container a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1175px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 20px;
+  }
+
+  .footer-h3 {
+    padding: 0;
+  }
 }

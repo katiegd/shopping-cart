@@ -1,4 +1,4 @@
-import "./ProductCard.css";
+import "../components/CSS/ProductCard.css";
 import heartEmpty from "../assets/heart-empty.svg";
 import heartFull from "../assets/heart-full.svg";
 import defaultImage from "../assets/27002.jpg";

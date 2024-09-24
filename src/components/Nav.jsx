@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import "./nav.css";
+import "../components/CSS/nav.css";
 import jacket from "../assets/jacket.svg";
 import Cart from "./Cart";
-import Likes from "./Likes";
 import heartEmpty from "../assets/heart-empty.svg";
 import heartFull from "../assets/heart-full.svg";
 

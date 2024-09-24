@@ -6,7 +6,6 @@
   justify-content: space-between;
   font-weight: 600;
   background-color: var(--nav);
-  height: 80px;
   padding: var(--site-padding);
   border-bottom: 3px solid var(--divider);
 }
@@ -56,8 +55,8 @@
   justify-content: center;
   position: absolute;
   top: 0px;
-  left: 40px;
-  padding: 5px;
+  left: 30px;
+  padding: 10px;
   border-radius: 50%;
   background-color: var(--accent-med);
   width: 10px;
@@ -70,8 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35px;
-  width: 35px;
+  transform: scale(1.2);
   padding: 10px;
   border-radius: 50%;
   transition: all 400ms ease;
@@ -79,7 +77,6 @@
 
 .cart-img:hover {
   cursor: pointer;
-  background-color: var(--accent-light);
 }
 
 .cart-wrapper {
@@ -93,19 +90,28 @@
 }
 
 .heart-container {
-  height: 35px;
-  width: 35px;
   padding: 0.2rem;
-  transition: all 200ms ease-out;
 }
 
 .heart-container img {
-  height: 35px;
-  width: 35px;
+  transform: scale(1.2);
+  transition: all 200ms ease-out;
 }
 
-.heart-container:hover {
-  transform: scale(1.2);
+.heart-container img:hover {
+  transform: scale(1.6);
   content: url("../assets/heart-full.svg");
   cursor: pointer;
+}
+
+@media (max-width: 1125px) {
+  .header {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .nav-container {
+    font-size: 18px;
+    gap: 10px;
+  }
 }

@@ -5,7 +5,6 @@ import Home from "./components/Home.jsx";
 import Shop from "./components/Shop.jsx";
 import Checkout from "./components/Checkout.jsx";
 import Likes from "./components/Likes.jsx";
-import "./index.css";
 import Layout from "./components/Layout.jsx";
 
 const router = createBrowserRouter([

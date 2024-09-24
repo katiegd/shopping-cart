@@ -1,4 +1,4 @@
-import "./DetailsModal.css";
+import "../components/CSS/DetailsModal.css";
 import heartEmpty from "../assets/heart-empty.svg";
 import QuantityInput from "./QuantityInput";
 

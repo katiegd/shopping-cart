@@ -1,4 +1,5 @@
-import "./CartDrawer.css";
+import "../components/CSS/CartDrawer.css";
+
 import { useState } from "react";
 import cartIcon from "../assets/cart.svg";
 import sadFace from "../assets/sad.svg";
