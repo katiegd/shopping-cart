@@ -66,6 +66,14 @@
     justify-content: center;
     width: 100%;
     overflow-x: scroll;
+    background-color: var(--nav);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .category-item.selected {
+    color: var(--accent-light);
+    background-color: var(--accent-dark);
   }
 
   .shop-container {
@@ -76,7 +84,6 @@
 @media (max-width: 530px) {
   .shop-products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35%, 40%));
     justify-content: center;
     gap: 2vw;
   }
@@ -87,7 +94,7 @@
 
   .shop-products button {
     font-size: 14px;
-    padding: 0.3rem 1rem;
+    padding: 0.8rem 1rem;
   }
 
   .categories-list {

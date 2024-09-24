@@ -11,6 +11,7 @@
 }
 
 .modal-content {
+  position: relative;
   background-color: var(--bg-light);
   margin: 15% auto;
   padding: 30px;
@@ -29,13 +30,13 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
   border: 1px solid #e2e2e2;
   border-radius: 50%;
-  top: -20px;
-  left: 20px;
+  top: 10px;
+  right: 10px;
   background-color: #f3f3f3;
   transition: all 200ms ease;
 }
@@ -144,11 +145,14 @@ input[type="number"] {
     font-size: 1.3rem;
   }
 
+  .mod-product-desc {
+    font-size: 0.8rem;
+  }
   .product-title {
     margin-bottom: 1rem;
   }
 
   .details-container {
-    gap: 20px;
+    gap: 10px;
   }
 }

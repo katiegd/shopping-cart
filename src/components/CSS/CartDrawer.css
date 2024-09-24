@@ -207,6 +207,18 @@
     background-color: var(--nav);
   }
 
+  .remove-button {
+    margin-top: 10px;
+  }
+
+  .buttons-container {
+    gap: 15px;
+  }
+
+  .quantity-buttons {
+    transform: scale(1.5);
+  }
+
   .cart-item-card {
     width: inherit;
   }

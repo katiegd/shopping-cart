@@ -15,15 +15,16 @@ export default function DetailsModal({
       {" "}
       <div className="modal">
         <div className="modal-content">
-          <span
-            className="close"
-            onClick={() => {
-              setShowDetails(false);
-              setInputNum(1);
-            }}
-          >
-            &times;
-          </span>
+          <div className="close">
+            <span
+              onClick={() => {
+                setShowDetails(false);
+                setInputNum(1);
+              }}
+            >
+              &times;
+            </span>
+          </div>
           <div className="product-details">
             <div className="img-container">
               <img src={product.image} className="product-img" />

@@ -36,3 +36,9 @@
   gap: 20px;
   justify-content: center;
 }
+
+@media (max-width: 1175px) {
+  .main-cart-container {
+    padding: 2rem 1rem;
+  }
+}
