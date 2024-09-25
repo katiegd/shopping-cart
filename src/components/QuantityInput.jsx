@@ -1,4 +1,11 @@
+import PropTypes from "prop-types";
+
 export default function QuantityInput({ inputNum, setInputNum }) {
+  QuantityInput.propTypes = {
+    inputNum: PropTypes.number,
+    setInputNum: PropTypes.func,
+  };
+
   function handleInputChange(e) {
     const target = e.target.value;
 

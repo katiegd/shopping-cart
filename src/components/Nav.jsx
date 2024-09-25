@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 import "../components/CSS/nav.css";
 import jacket from "../assets/jacket.svg";
 import Cart from "./Cart";
@@ -21,6 +23,23 @@ export default function Navigation({
   likes,
 }) {
   const total = getTotalQuantity();
+
+  Navigation.propTypes = {
+    cart: PropTypes.array,
+    total: PropTypes.number,
+    clearCart: PropTypes.func,
+    formatPrice: PropTypes.func,
+    calculateTotal: PropTypes.func,
+    limitCharacters: PropTypes.func,
+    incrementCart: PropTypes.func,
+    decrementCart: PropTypes.func,
+    getTotalQuantity: PropTypes.func,
+    inputNum: PropTypes.number,
+    setInputNum: PropTypes.func,
+    addToCart: PropTypes.func,
+    removeFromCart: PropTypes.func,
+    likes: PropTypes.array,
+  };
   return (
     <>
       <div className="header nav">

@@ -1,8 +1,10 @@
+import PropTypes from "prop-types";
 import "../components/CSS/ProductCard.css";
 import heartEmpty from "../assets/heart-empty.svg";
 import heartFull from "../assets/heart-full.svg";
 import defaultImage from "../assets/27002.jpg";
-import { useOutlet, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
 
 //Need to validate props
 export default function ProductCard({
@@ -11,13 +13,28 @@ export default function ProductCard({
   setProdDetails,
   formatPrice,
 }) {
+  ProductCard.propTypes = {
+    product: PropTypes.object,
+    setShowDetails: PropTypes.func,
+    setProdDetails: PropTypes.func,
+    formatPrice: PropTypes.func,
+  };
+
   const { addToCart, likes, toggleLikes } = useOutletContext();
+  const [added, setAdded] = useState(false);
+
   function limitCharacters(str) {
     return str.length > 50 ? str.substring(0, 50) + "..." : str;
   }
   function showProdDetails() {
     setShowDetails(true);
     setProdDetails(product);
+  }
+
+  function addedAnimation() {
+    setAdded((prev) => !prev);
+
+    setTimeout(() => setAdded(false), 1500);
   }
 
   return (
@@ -55,9 +72,10 @@ export default function ProductCard({
               onClick={(e) => {
                 e.stopPropagation();
                 addToCart(product, 1);
+                addedAnimation();
               }}
             >
-              Add to Cart
+              {added ? "Added!" : "Add to Cart"}
             </button>
           </div>
         </div>

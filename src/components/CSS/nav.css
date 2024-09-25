@@ -1,4 +1,7 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   color: var(--text-dark);
   margin: 0;
   display: flex;
@@ -14,7 +17,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 2rem;
 }
 
 .site-name {
@@ -100,7 +102,6 @@
 
 .heart-container img:hover {
   transform: scale(1.6);
-  content: url("../assets/heart-full.svg");
   cursor: pointer;
 }
 

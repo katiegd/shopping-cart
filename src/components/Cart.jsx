@@ -1,5 +1,5 @@
 import "../components/CSS/CartDrawer.css";
-
+import PropTypes from "prop-types";
 import { useState } from "react";
 import cartIcon from "../assets/cart.svg";
 import sadFace from "../assets/sad.svg";
@@ -15,6 +15,17 @@ export default function Cart({
   incrementCart,
   decrementCart,
 }) {
+  Cart.propTypes = {
+    cart: PropTypes.array,
+    total: PropTypes.number,
+    clearCart: PropTypes.func,
+    formatPrice: PropTypes.func,
+    calculateTotal: PropTypes.func,
+    limitCharacters: PropTypes.func,
+    incrementCart: PropTypes.func,
+    decrementCart: PropTypes.func,
+  };
+
   const [showCartDrawer, setShowCartDrawer] = useState(false);
 
   function toggleCart() {

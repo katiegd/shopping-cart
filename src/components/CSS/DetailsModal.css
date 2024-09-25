@@ -82,6 +82,18 @@
   font-weight: 700;
 }
 
+.mod-product-fav {
+  padding: 0.2rem;
+  width: 40px;
+  height: 40px;
+  transition: all 200ms ease-out;
+}
+
+.mod-product-fav:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .mod-product-desc {
   line-height: 1.4rem;
   font-weight: 400;
@@ -132,7 +144,8 @@ input[type="number"] {
 
 @media (max-width: 1125px) {
   .modal-content {
-    max-width: 95%;
+    width: 95%;
+    margin: 40% auto;
   }
   .product-details {
     display: flex;
