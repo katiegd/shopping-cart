@@ -43,6 +43,7 @@ export default function ProductCard({
         <div className="product-img">
           <img
             src={product.image}
+            alt={product.title}
             className="prod-img"
             onError={(e) => (e.target.src = defaultImage)} //Shows default image if link is broken from API
           />
@@ -55,6 +56,7 @@ export default function ProductCard({
                   ? heartFull
                   : heartEmpty
               }
+              alt="Add/Remove from Saved List"
               className="product-fav"
               onClick={(e) => {
                 e.stopPropagation();

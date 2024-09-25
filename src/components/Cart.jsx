@@ -35,7 +35,12 @@ export default function Cart({
   return (
     <>
       <div className="cart-wrapper">
-        <img src={cartIcon} className="cart-img" onClick={() => toggleCart()} />
+        <img
+          src={cartIcon}
+          alt="Cart"
+          className="cart-img"
+          onClick={() => toggleCart()}
+        />
         {total > 0 ? <p className="cart-total">{total}</p> : ""}
       </div>
 

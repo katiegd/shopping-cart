@@ -50,13 +50,18 @@ export default function Navigation({
               <p className="site-name">Jaquette</p>
             </Link>
           </div>
-          <Link to="/">Home</Link>
+          <Link to="/" className="nav-home">
+            Home
+          </Link>
           <Link to="shop">Shop</Link>
         </div>
         <div className="cart-likes-container">
           <Link to="likes">
             <div className="heart-container">
-              <img src={likes.length > 0 ? heartFull : heartEmpty} />
+              <img
+                src={likes.length > 0 ? heartFull : heartEmpty}
+                alt="Saved List"
+              />
             </div>
           </Link>
           <Cart
